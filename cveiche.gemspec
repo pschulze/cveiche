@@ -12,18 +12,11 @@ Gem::Specification.new do |spec|
 
   spec.summary       = 'A simple gem for finding CVE information.'
   spec.description   = 'A simple gem for finding CVE information.'
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = 'https://github.com/pschulze/cveiche'
   spec.license       = 'MIT'
 
   if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
-
     spec.metadata['homepage_uri'] = spec.homepage
-    spec.metadata['source_code_uri'] = "TODO: Put your gem's public repo URL here."
-    spec.metadata['changelog_uri'] = "TODO: Put your gem's CHANGELOG.md URL here."
-  else
-    raise 'RubyGems 2.0 or newer is required to protect against ' \
-      'public gem pushes.'
   end
 
   spec.files = `git ls-files -z`.split("\x0").reject do |f|
