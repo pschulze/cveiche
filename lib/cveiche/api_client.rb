@@ -22,7 +22,7 @@ module Cveiche
       uri = URI.parse(BASE_URI + '/browse' + "/#{vendor}")
       response = @client.get(uri)
       json = JSON.parse(response.body)
-      json['product']
+      json.empty? ? nil : json['product']
     end
 
     def cves_for_vendor_product(vendor, product)
@@ -31,7 +31,7 @@ module Cveiche
       json = JSON.parse(response.body)
       cves = []
       json.each { |item| cves << item['id'] }
-      cves
+      json.empty? nil : cves
     end
 
     def cve_for_id(cve_id)
