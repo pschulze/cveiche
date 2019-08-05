@@ -1,0 +1,71 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cve.circl.lu/api/search/tesla/gateway_ecu
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      User-Agent:
+      - net/hippie 0.2.6
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 05 Aug 2019 17:04:36 GMT
+      Server:
+      - TornadoServer/4.4.2
+      Strict-Transport-Security:
+      - max-age=15768000
+      Content-Length:
+      - '1238'
+      Content-Type:
+      - application/json
+      Access-Control-Allow-Origin:
+      - https://cve.circl.lu
+    body:
+      encoding: UTF-8
+      string: |-
+        [
+            {
+                "Modified": "2017-03-14T09:16:18.140000",
+                "Published": "2017-02-13T16:59:01.610000",
+                "access": {
+                    "authentication": "NONE",
+                    "complexity": "HIGH",
+                    "vector": "NETWORK"
+                },
+                "cvss": 4.0,
+                "cvss-time": "2017-03-10T10:44:02.530000",
+                "cwe": "CWE-77",
+                "id": "CVE-2016-9337",
+                "impact": {
+                    "availability": "PARTIAL",
+                    "confidentiality": "NONE",
+                    "integrity": "PARTIAL"
+                },
+                "references": [
+                    "http://www.securityfocus.com/bid/94697",
+                    "https://ics-cert.us-cert.gov/advisories/ICSA-16-341-01"
+                ],
+                "summary": "An issue was discovered in Tesla Motors Model S automobile, all firmware versions before version 7.1 (2.36.31) with web browser functionality enabled. The vehicle's Gateway ECU is susceptible to commands that may allow an attacker to install malicious software allowing the attacker to send messages to the vehicle's CAN bus, a Command Injection.",
+                "vulnerable_configuration": [
+                    "cpe:2.3:o:tesla:gateway_ecu"
+                ],
+                "vulnerable_configuration_cpe_2_2": [
+                    "cpe:/o:tesla:gateway_ecu:-"
+                ]
+            }
+        ]
+    http_version: 
+  recorded_at: Mon, 05 Aug 2019 17:04:38 GMT
+recorded_with: VCR 5.0.0
