@@ -31,7 +31,7 @@ module Cveiche
       json = JSON.parse(response.body)
       cves = []
       json.each { |item| cves << item['id'] }
-      json.empty? nil : cves
+      json.empty? ? nil : cves
     end
 
     def cve_for_id(cve_id)
